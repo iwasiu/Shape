@@ -17,21 +17,17 @@ public double getLength() {
 	return length;
 }
 
-
 public void setLength(double length) {
 	this.length = length;
 }
-
 
 public double getBreadth() {
 	return breadth;
 }
 
-
 public void setBreadth(double breadth) {
 	this.breadth = breadth;
 }
-
 
 	//	implementation of abstract method to find perimeter of a shape
 	public void getPerimeter() {
