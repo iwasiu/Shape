@@ -32,11 +32,11 @@ public void setBreadth(double breadth) {
 
 	//	implementation of abstract method to find perimeter of a shape
 	public void getPerimeter() {
-	System.out.println("perimeter method for Quadrilateral");	
+		System.out.print("The perimeter this quadrilateral of length :"+this.length+ " and "+this.length+" = "+2 * (this.length + this.breadth));	
 	}
 
 //	implementation of abstract method to find area of a shape
 	public void getArea() {
-		System.out.println("area method for Quadrilateral");	
+		System.out.print("The area this quadrilateral of length :"+this.length+ " and "+this.length+" = "+(this.length * this.breadth));	
 	}
 }
