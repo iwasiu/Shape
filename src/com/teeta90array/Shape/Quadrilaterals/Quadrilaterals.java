@@ -3,6 +3,7 @@ package com.teeta90array.Shape.Quadrilaterals;
 import com.teeta90array.Shape.planeShape;
 
 public class Quadrilaterals extends planeShape{
+	private static int count = 0;
 	private double length, breadth;
 	
 //	constructor
