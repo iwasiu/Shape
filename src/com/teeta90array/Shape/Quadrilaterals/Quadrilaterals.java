@@ -39,4 +39,45 @@ public void setBreadth(double breadth) {
 	public void getArea() {
 		System.out.print("The area this quadrilateral of length :"+this.length+ " and "+this.length+" = "+(this.length * this.breadth));	
 	}
+	
+//	check 
+	private boolean isSquare = isSquare();
+	private boolean isRectangle = isRectangle();
+	private boolean isTrapezium = isTrapezium();
+	private boolean isParallelogram = isParallelogram();
+	private boolean isRhombus = isRhombus();
+	private boolean isKite = isKite();
+
+	private boolean isSquare() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isKite() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isRhombus() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isParallelogram() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isTrapezium() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	private boolean isRectangle() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	
 }
