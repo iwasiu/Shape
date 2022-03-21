@@ -80,16 +80,21 @@ public class Quadrilaterals extends planeShape{
 		System.out.println("The area of "+getShapeName()+" of length: "+this.length+ " and breadth: "+this.breadth+" = "+(this.length * this.breadth));	
 	}
 	
+	//	method to get particular quadrilateral name 	
 	private String getShapeName() {
 		String name ="";
 		if(isSquare()){
 			name =  "square";
 		}
+		else{
+			name = "rectangle";
+		}
 		return name;
 	}
+
 	//	check 
 	private boolean isSquare = isSquare();
-	// private boolean isRectangle = isRectangle();
+	private boolean isRectangle = isRectangle();
 	// private boolean isTrapezium = isTrapezium();
 	// private boolean isParallelogram = isParallelogram();
 	// private boolean isRhombus = isRhombus();
@@ -120,11 +125,8 @@ public class Quadrilaterals extends planeShape{
 	// 	return false;
 	// }
 
-	// private boolean isRectangle() {
-	// 	// TODO Auto-generated method stub
-	// 	return false;
-	// }
-	
-	
-	
+	private boolean isRectangle() {
+		// check for unequal length
+		return getLength() != getBreadth();
+	}	
 }
