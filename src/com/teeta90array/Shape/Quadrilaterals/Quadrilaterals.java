@@ -4,7 +4,7 @@ import com.teeta90array.Shape.planeShape;
 
 public class Quadrilaterals extends planeShape{
 	private static int count = 0;
-	private double length, breadth, parallelSide1, parallelSide2, vertical_Height, base_Length;
+	private double length, breadth, parallelSide1, parallelSide2, verticalHeight, base_Length;
 
 	//	constructor for length and breadth(square and rectangle)
 	public Quadrilaterals(double length, double breadth) {
@@ -18,14 +18,14 @@ public class Quadrilaterals extends planeShape{
 		super();
 		this.parallelSide1 = parallelSide1;
 		this.parallelSide2 = parallelSide2;
-		this.vertical_Height = verticalHeight;
+		this.verticalHeight = verticalHeight;
 	}
 
 	//constructor for baseLength and verticalHeight(parallelogram)
 	public Quadrilaterals(double baseLength, long verticalHeight) {
 		super();
 		this.base_Length = baseLength;
-		this.vertical_Height = verticalHeight;
+		this.verticalHeight = verticalHeight;
 	}
 
 
@@ -63,39 +63,75 @@ public class Quadrilaterals extends planeShape{
 	}
 
 	public double getVerticalHeight() {
-		return vertical_Height;
+		return verticalHeight;
 	}
 
 	public void setVerticalHeight(double verticalHeight) {
-		this.vertical_Height = verticalHeight;
+		this.verticalHeight = verticalHeight;
 	}
 
 	//	implementation of abstract method to find perimeter of a shape
+	@Override
 	public void getPerimeter() {
-		System.out.println("The perimeter this quadrilateral of length: "+this.length+ " and breadth: "+this.breadth+" = "+2 * (this.length + this.breadth));	
+		double perimter = getParticularPerimeter();
+		System.out.println("The perimeter of "+getShapeName()+" of length: "+this.length+ " and breadth: "+this.breadth+" = "+perimter);	
 	}
 
-//	implementation of abstract method to find area of a shape
+	//	implementation of abstract method to find area of a shape
+	@Override
 	public void getArea() {
-		System.out.println("The area of "+getShapeName()+" of length: "+this.length+ " and breadth: "+this.breadth+" = "+(this.length * this.breadth));	
+		double area = getParticularArea();
+		System.out.println("The area of "+getShapeName()+" of length: "+this.length+ " and breadth: "+this.breadth+" = "+area);	
 	}
-	
-	//	method to get particular quadrilateral name 	
-	private String getShapeName() {
-		String name ="";
+
+	private double getParticularPerimeter() {
+		double name = 0;
 		if(isSquare()){
-			name =  "square";
+			name = 2 *(getLength() + getBreadth());
+		}else if(isRectangle()){
+			name = 2 *(getLength() + getBreadth());
+		}else if(isTrapezium()){
+			name = (1/2) * (getParallelSide1()+getParallelSide2()) * getVerticalHeight();
 		}
-		else{
-			name = "rectangle";
-		}
+
 		return name;
 	}
+
+	private double getParticularArea() {
+		double name = 0;
+		if(isSquare()){
+			name = getLength() * getBreadth();
+		}else if(isRectangle()){
+			name = getLength() * getBreadth();
+		}else if(isTrapezium()){
+			name = (getParallelSide1()+getParallelSide2())/2 * getVerticalHeight();
+		}
+
+		return name;
+	}
+
+	//	method to get particular quadrilateral name 	
+	private String getShapeName() {
+		String nameForShape = "";
+		if(isSquare()){
+			nameForShape =  "square";
+		}else if(isRectangle()){
+			nameForShape = "rectangle";
+		}else if(isTrapezium()){
+			nameForShape = "trapezium";
+		// }else if(isRectangle){
+		// 	nameForShape = "rectangle";
+		// }else if(isRectangle){
+		// 	nameForShape = "rectangle";
+		}
+		return nameForShape ;
+	}
+
 
 	//	check 
 	private boolean isSquare = isSquare();
 	private boolean isRectangle = isRectangle();
-	// private boolean isTrapezium = isTrapezium();
+	private boolean isTrapezium = isTrapezium();
 	// private boolean isParallelogram = isParallelogram();
 	// private boolean isRhombus = isRhombus();
 	// private boolean isKite = isKite();
@@ -103,6 +139,16 @@ public class Quadrilaterals extends planeShape{
 	private boolean isSquare() {
 		// check for same length
 		return getLength() == getBreadth();
+	}
+
+	private boolean isRectangle() {
+		// check for unequal length
+		return getLength() != getBreadth();
+	}
+
+	private boolean isTrapezium() {
+		// check for if all sides are non-zero
+		return (getParallelSide1()>0.0 && getParallelSide2()>0.0 && getVerticalHeight()>0.0);
 	}
 
 	// private boolean isKite() {
@@ -118,15 +164,5 @@ public class Quadrilaterals extends planeShape{
 	// private boolean isParallelogram() {
 	// 	// TODO Auto-generated method stub
 	// 	return false;
-	// }
-
-	// private boolean isTrapezium() {
-	// 	// TODO Auto-generated method stub
-	// 	return false;
-	// }
-
-	private boolean isRectangle() {
-		// check for unequal length
-		return getLength() != getBreadth();
-	}	
+	// }	
 }
