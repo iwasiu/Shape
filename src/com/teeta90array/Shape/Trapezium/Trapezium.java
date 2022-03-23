@@ -82,8 +82,12 @@ public class Trapezium extends Quadrilaterals{
 
     //	A method to find perimeter of a square
 	public void getPerimeter() {
-		System.out.println("The perimeter of a trapezium("+this.side1+" ,"+this.side2+"+"+this.side3+" ,"+this.side4+")"
+        if(this.side1==0.0 || this.side2==0.0 || this.side3==0.0 || this.side4==0.0){
+            System.out.println("incomplete variable to find trapezium's perimeter");
+        }else{
+        System.out.println("The perimeter of a trapezium("+this.side1+" ,"+this.side2+" ,"+this.side3+" ,"+this.side4+")"
                                     + " = " + perimeter());
+        }
 	}
 
     private double perimeter() {
@@ -92,11 +96,15 @@ public class Trapezium extends Quadrilaterals{
 
 	//	A method to find area of a square
 	public void getArea() {
-		System.out.println("The area of a rectangle("+this.shortBaseLength+" ,"+this.longBaseLength+")"
+        if(this.shortBaseLength==0.0 || this.longBaseLength==0.0 || this.verticalheight==0.0){
+            System.out.println("wrong argument variables to find trapezium's area");
+        }else{
+		    System.out.println("The area of a trapezium("+this.shortBaseLength+" ,"+this.longBaseLength+", "+this.verticalheight+")"
                                     + " = " +(area()));	
+        }
 	}
 
     private double area() {
-        return (this.shortBaseLength * this.longBaseLength)/2 * this.verticalheight;
+        return (this.shortBaseLength + this.longBaseLength)/2 * this.verticalheight;
     }
 }
