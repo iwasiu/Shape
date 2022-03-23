@@ -5,6 +5,7 @@ import com.teeta90array.Shape.planeShape;
 
 public class Circle extends planeShape {
     private double radius;
+    private double diameter;
     private static final double PIE = 3.142;
     
     public Circle(double radius) {
@@ -28,9 +29,11 @@ public class Circle extends planeShape {
     @Override
     public void getArea() {
         // method to get the area of a circle
-        System.out.println("The circle's area of radius: "+this.radius+ " = "+PIE*radius*radius);
+        if(getRadius()>0.0){
+            System.out.println("The circle's area of radius: "+this.radius+ " = "+PIE*radius*radius);
+    
+        }
     }
-
 
 
 }

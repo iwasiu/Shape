@@ -9,7 +9,7 @@ public class ShapeApp {
 		// create object of square
 		Quadrilaterals q1 = new Quadrilaterals(2.0, 2.0);
 		Quadrilaterals q2 = new Quadrilaterals(3.0, 4.0);
-		Quadrilaterals q3 = new Quadrilaterals(2.0, 3.0, 2.0);
+		Quadrilaterals q3 = new Quadrilaterals(5.0, 2.0);
 
 		Circle c1 = new Circle(7);
 

@@ -4,70 +4,17 @@ import com.teeta90array.Shape.planeShape;
 
 public class Quadrilaterals extends planeShape{
 	private static int count = 0;
-	private double length, breadth, parallelSide1, parallelSide2, verticalHeight, base_Length;
+	private double length, breadth;
 
+	//	empty constructor
+	public Quadrilaterals() {
+	}	
+	
 	//	constructor for length and breadth(square and rectangle)
 	public Quadrilaterals(double length, double breadth) {
 			super();
 			this.length = length;
 			this.breadth = breadth;
-	}
-
-	//constructor for parallelSide1,parallelSide2 and verticalHeight(trapezium)
-	public Quadrilaterals(double parallelSide1, double parallelSide2, double verticalHeight) {
-		super();
-		this.parallelSide1 = parallelSide1;
-		this.parallelSide2 = parallelSide2;
-		this.verticalHeight = verticalHeight;
-	}
-
-	//constructor for baseLength and verticalHeight(parallelogram)
-	public Quadrilaterals(double baseLength, long verticalHeight) {
-		super();
-		this.base_Length = baseLength;
-		this.verticalHeight = verticalHeight;
-	}
-
-
-	//	getters and setters methods
-	public double getLength() {
-		return length;
-	}
-
-	public void setLength(double length) {
-		this.length = length;
-	}
-
-	public double getBreadth() {
-		return breadth;
-	}
-
-	public void setBreadth(double breadth) {
-		this.breadth = breadth;
-	}
-
-	public double getParallelSide1() {
-		return parallelSide1;
-	}
-
-	public void setParallelSide1(double parallelSide1) {
-		this.parallelSide1 = parallelSide1;
-	}
-
-	public double getParallelSide2() {
-		return parallelSide2;
-	}
-
-	public void setParallelSide2(double parallelSide2) {
-		this.parallelSide2 = parallelSide2;
-	}
-
-	public double getVerticalHeight() {
-		return verticalHeight;
-	}
-
-	public void setVerticalHeight(double verticalHeight) {
-		this.verticalHeight = verticalHeight;
 	}
 
 	//	implementation of abstract method to find perimeter of a shape
@@ -91,7 +38,7 @@ public class Quadrilaterals extends planeShape{
 		}else if(isRectangle()){
 			name = 2 *(getLength() + getBreadth());
 		}else if(isTrapezium()){
-			name = (1/2) * (getParallelSide1()+getParallelSide2()) * getVerticalHeight();
+			name = 11111111.0;
 		}
 
 		return name;
