@@ -17,6 +17,7 @@ public class ShapeApp {
 		Quadrilaterals q4 = new Trapezium(2.0,3.0,4.0);
 		Quadrilaterals q5 = new Trapezium(2.0,3.0,4.0,1.0);
 		Circle c1 = new Circle(7);
+		Circle c2 = new Circle(14);
 
 		System.out.println("-------square---------");
 		q1.getArea();
@@ -35,7 +36,9 @@ public class ShapeApp {
 		q5.getPerimeter();
 		System.out.println("--------circle--------");
 		c1.getArea();
-		// c1.getPerimeter();
+		c1.getPerimeter();
+		c2.getArea();
+		c2.getPerimeter();
 		// create an on
 	}
 }
