@@ -43,13 +43,13 @@ public class Triangle extends Quadrilaterals{
   
    	//	A method to find perimeter of a triangle
 	public void getPerimeter() {
-		System.out.println("The perimeter of a triangle(: "+this.side1+" ,"+this.side2+" ,"+this.side3+")"
+		System.out.println("The perimeter of a triangle("+this.side1+" ,"+this.side2+" ,"+this.side3+")"
                                     + " = " +(this.side1+this.side2+this.side3));	
 	}
 
 	//	A method to find area of a triangle
 	public void getArea() {
-		System.out.println("The area of a triangle(: "+this.side1+" ,"+this.side2+" ,"+this.side3+")"
+		System.out.println("The area of a triangle("+this.side1+" ,"+this.side2+" ,"+this.side3+")"
                                     + " = " +(this.side1*this.side2*this.side3));	
 	}
 }

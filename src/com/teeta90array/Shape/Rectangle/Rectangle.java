@@ -1,6 +1,8 @@
 package com.teeta90array.Shape.Rectangle;
 
-public class Rectangle {
+import com.teeta90array.Shape.Quadrilaterals.Quadrilaterals;
+
+public class Rectangle extends Quadrilaterals {
     private double length, breadth;
 
     public Rectangle() {
@@ -28,7 +30,7 @@ public class Rectangle {
     }
         //	A method to find perimeter of a square
 	public void getPerimeter() {
-		System.out.println("The perimeter of a rectangle(: "+this.length+" ,"+this.breadth+")"
+		System.out.println("The perimeter of a rectangle("+this.length+" ,"+this.breadth+")"
                                     + " = " + perimeter());
 	}
 
@@ -38,7 +40,7 @@ public class Rectangle {
 
 	//	A method to find area of a square
 	public void getArea() {
-		System.out.println("The area of a rectangle(: "+this.length+" ,"+this.breadth+")"
+		System.out.println("The area of a rectangle("+this.length+" ,"+this.breadth+")"
                                     + " = " +(area()));	
 	}
 
